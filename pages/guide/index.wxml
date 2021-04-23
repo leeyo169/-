@@ -1,0 +1,21 @@
+<!--pages/guide/index.wxml-->
+
+<view class="root">
+  <view class="list-item">
+    <icon class="icon-box-img" type="success" size="93" style="display:{{isClick ? 'block' : 'none'}}"></icon>
+    <icon class="icon-box-img" type="info" size="93" style="display:{{isClick ? 'none' : 'block'}}"></icon>
+  </view>
+  <view class="list-item">
+    <text>插座已关闭</text>
+  </view>
+  <block wx:for="{{list}}" wx:for-item="item"> 
+    <view class="list-item" data-url="{{item}}" bindtap="gotoOtherage">
+      <view class="list-item-header">
+        <view class="list-item-header-name">{{item.name}}</view>
+        <!-- <view class="list-item-header-text">{{item.text}}</view> -->
+      </view>
+      <!-- <van-icon name="arrow" size="12px" /> -->
+    </view>
+  </block>
+ 
+</view>
